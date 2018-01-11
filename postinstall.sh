@@ -208,6 +208,14 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+# Installer l'environnement de bureau Xfce
+echo "::"
+echo -e ":: Installation de l'environnement de bureau Xfce... \c"
+yum -y groupinstall "Xfce" >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 echo
 
 exit 0
