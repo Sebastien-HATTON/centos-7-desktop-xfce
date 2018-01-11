@@ -200,6 +200,14 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+# Installer le groupe de paquets X Window System
+echo "::"
+echo -e ":: Installation du serveur graphique X Window... \c"
+yum -y groupinstall "X Window System" >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 echo
 
 exit 0
