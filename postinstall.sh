@@ -159,6 +159,18 @@ if ! rpm -q nux-dextop-release 2>&1 > /dev/null ; then
   echo
 fi
 
+# Activer le dépôt [adobe-linux-x86_64] avec une priorité de 10
+if ! rpm -q adobe-release-x86_64 2>&1 > /dev/null ; then
+  echo "::"
+  echo -e ":: Configuration du dépôt de paquets Adobe... \c"
+  yum -y localinstall $CWD/config/yum/adobe-release-*.rpm >> $LOG 2>&1
+  rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux >> $LOG 2>&1
+  cat $CWD/config/yum/adobe-linux-x86_64.repo > /etc/yum.repos.d/adobe-linux-x86_64.repo
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+fi
+
 echo
 
 exit 0
