@@ -25,3 +25,5 @@ EDITOR=vim
 VISUAL=$EDITOR
 export EDITOR VISUAL
 
+# Git
+unset SSH_ASKPASS
