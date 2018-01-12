@@ -225,6 +225,15 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+# Installer les paquets listés dans config/pkglists/bureau-xfce.txt
+echo "::"
+echo -e ":: Installation des applications supplémentaires... \c"
+PAQUETS=$(egrep -v '(^\#)|(^\s+$)' $CWD/config/pkglists/bureau-xfce.txt)
+yum -y install $PAQUETS >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 echo
 
 exit 0

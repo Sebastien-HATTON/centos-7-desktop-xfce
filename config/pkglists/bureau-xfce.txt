@@ -1,0 +1,91 @@
+# Système
+gvfs-afc
+gvfs-afp
+gvfs-archive
+gvfs-fuse
+gvfs-goa
+gvfs-gphoto2
+gvfs-mtp
+gvfs-smb
+ntfs-3g
+ntfsprogs
+unrar
+
+# Xfce
+bluecurve-cursor-theme
+caja
+clearlooks-phenix-gtk2-theme
+clearlooks-phenix-gtk3-theme
+clearlooks-phenix-xfwm4-theme
+desktop-backgrounds-basic
+elementary-xfce-icon-theme
+ffmpegthumbnailer
+plank
+xdg-user-dirs
+xfce4-screenshooter
+xfce4-whiskermenu-plugin
+xfce4-xkb-plugin
+xscreensaver
+
+# Polices TrueType
+freetype-infinality
+google-droid-sans-fonts
+urw-fonts
+webcore-fonts
+webcore-fonts-vista
+
+# Internet
+filezilla
+firefox
+pidgin
+pidgin-otr
+thunderbird
+thunderbird-enigmail
+transmission
+
+# Bureautique
+evince
+libreoffice
+libreoffice-langpack-de
+libreoffice-langpack-fr
+
+# Graphisme
+gimp
+gimp-data-extras
+gimp-help-de
+gimp-help-fr
+gimp-layer-via-copy-cut
+gimp-save-for-web
+gthumb
+inkscape
+inkscape-docs
+inkscape-view
+librecad
+scribus
+simple-scan
+
+# Multimédia
+asunder
+audacious 
+audacious-plugins
+audacity-freeworld
+HandBrake-gui
+lame
+libdvdcss
+mplayer
+openshot
+vlc
+winff
+
+# Accessoires
+cherrytree
+conky
+engrampa
+gedit
+gedit-plugins
+p7zip
+brasero
+
+# Jeux
+aisleriot
+
