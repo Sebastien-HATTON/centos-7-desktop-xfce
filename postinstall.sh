@@ -56,6 +56,7 @@ if ! rpm -q deltarpm 2>&1 > /dev/null ; then
   echo -e "[${VERT}OK${GRIS}] \c"
   sleep $DELAY
   echo
+  echo "::"
 fi
 
 # Mise à jour initiale
