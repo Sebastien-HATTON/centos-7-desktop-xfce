@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=Photo Booth
+Name[de]=Fotoautomat
+Name[fr]=Photomaton
+Comment=Cheese
+Exec=cheese
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=org.gnome.Cheese
+Categories=GNOME;AudioVideo;Video;Recorder;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=cheese
+X-GNOME-Bugzilla-Component=general
+X-GNOME-Bugzilla-Version=3.22.1
+DBusActivatable=true

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Calendar
+Name[de]=Kalender
+Name[fr]=Calendrier
+Comment=Orage
+Version=1.0
+Exec=orage
+Icon=xfcalendar
+StartupNotify=true
+MimeType=text/calendar;
+Terminal=false
+Type=Application
+Categories=X-XFCE;Office;Calendar;GTK;
+X-Desktop-File-Install-Version=0.22

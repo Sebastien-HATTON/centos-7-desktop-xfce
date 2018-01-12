@@ -234,6 +234,15 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+# Personnaliser les entrées du menu Xfce
+echo "::"
+echo -e ":: Personnalisation des entrées de menu Xfce... \c"
+sleep $DELAY
+$CWD/menus.sh >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 echo
 
 exit 0
