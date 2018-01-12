@@ -48,6 +48,16 @@ echo "       # tail -f /tmp/postinstall.log"
 echo
 sleep $DELAY
 
+# Activer la gestion des Delta RPM
+if ! rpm -q deltarpm 2>&1 > /dev/null ; then
+  echo "::"
+  echo -e ":: Activer la gestion des Delta RPM... \c"
+  yum -y install deltarpm >> $LOG 2>&1
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+fi
+
 # Mise à jour initiale
 echo -e ":: Mise à jour initiale du système... \c"
 yum -y update >> $LOG 2>&1
