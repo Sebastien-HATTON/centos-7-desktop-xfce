@@ -1,0 +1,9 @@
+# Paquets inutiles
+
+# Système
+firewall-config
+firewalld
+postfix
+setroubleshoot
+system-config-date
+system-config-printer
