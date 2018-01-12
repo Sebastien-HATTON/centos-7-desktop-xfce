@@ -50,7 +50,6 @@ sleep $DELAY
 
 # Activer la gestion des Delta RPM
 if ! rpm -q deltarpm 2>&1 > /dev/null ; then
-  echo "::"
   echo -e ":: Activer la gestion des Delta RPM... \c"
   yum -y install deltarpm >> $LOG 2>&1
   echo -e "[${VERT}OK${GRIS}] \c"
