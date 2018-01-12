@@ -303,6 +303,14 @@ if [ ! -f /usr/share/backgrounds/.microlinux ]; then
   echo
 fi
 
+# Basculer en mode graphique par défaut
+echo "::"
+echo -e ":: Basculer en mode graphique par défaut... \c"
+systemctl set-default graphical.target >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 # Avertissement final
 echo
 echo "     L'installation du bureau est terminée. À présent," 
