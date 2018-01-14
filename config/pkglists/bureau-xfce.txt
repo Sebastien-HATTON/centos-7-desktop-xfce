@@ -50,6 +50,7 @@ libreoffice-langpack-de
 libreoffice-langpack-fr
 
 # Graphisme
+cdlabelgen
 gimp
 gimp-data-extras
 gimp-help-de
@@ -74,6 +75,7 @@ lame
 libdvdcss
 mplayer
 openshot
+python-CDDB
 vlc
 winff
 
