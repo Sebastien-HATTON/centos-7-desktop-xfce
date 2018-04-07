@@ -7,3 +7,10 @@ postfix
 setroubleshoot
 system-config-date
 system-config-printer
+
+# XScreenSaver
+xscreesaver
+xscreesaver-base
+xscreesaver-extras
+xscreesaver-gl-base
+xscreesaver-gl-extras
