@@ -336,6 +336,20 @@ if [ ! -f /usr/share/backgrounds/.microlinux ]; then
   echo
 fi
 
+# Personnaliser GDM
+if [ ! -f /etc/dconf/profile/gdm ]; then
+  echo "::"
+  echo -e ":: Personnalisation de GDM... \c"
+  cat $CWD/config/gdm/gdm > /etc/dconf/profile/gdm
+  cat $CWD/config/gdm/00-login-screen > /etc/dconf/db/gdm.d/00-login-screen
+  cat $CWD/config/gdm/01-logo > /etc/dconf/db/gdm.d/01-logo
+  cp $CWD/config/gdm/microlinux-logo.png /usr/share/pixmaps/ >> $LOG 2>&1
+  dconf update
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+fi
+
 # Basculer en mode graphique par défaut
 echo "::"
 echo -e ":: Basculer en mode graphique par défaut... \c"
