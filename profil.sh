@@ -16,6 +16,9 @@ tar xvjf $CWD/config/xfce/config.tar.bz2 -C /etc/skel/
 echo ":: Configuration de Gtkcdlabel."
 cat $CWD/config/xfce/gtkcdlabelrc > /etc/skel/.gtkcdlabelrc
 
+echo ":: Configuration de XScreenSaver"
+cat $CWD/config/xfce/xscreensaver > /etc/skel/.xscreensaver
+
 echo
 
 exit 0
