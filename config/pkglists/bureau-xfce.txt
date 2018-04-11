@@ -15,6 +15,7 @@ poppler-utils
 python-mutagen
 python-rarfile
 unrar
+untex
 
 # Xfce
 bluecurve-cursor-theme
