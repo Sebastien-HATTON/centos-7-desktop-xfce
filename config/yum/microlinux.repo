@@ -1,0 +1,7 @@
+[microlinux]
+enabled=1
+priority=1
+name=Microlinux Enterprise Packages $releasever - $basearch
+baseurl=https://centos.microlinux.fr/centos/$releasever/$basearch
+gpgcheck=1
+

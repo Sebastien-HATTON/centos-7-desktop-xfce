@@ -193,6 +193,18 @@ if ! rpm -q elrepo-release 2>&1 > /dev/null ; then
   echo
 fi
 
+# Activer le dépôt [microlinux] avec une priorité de 1
+if [ ! -f /etc/yum.repos.d/microlinux.repo ]; then
+  echo "::"
+  echo -e ":: Configuration du dépôt Microlinux... \c"
+  sleep $DELAY
+  rpm --import https://centos.microlinux.fr/centos/RPM-GPG-KEY-microlinux >> $LOG 2>&1
+  cat $CWD/config/yum/microlinux.repo > /etc/yum.repos.d/microlinux.repo
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+fi
+
 # Synchroniser les dépôts de paquets
 echo "::"
 echo -e ":: Synchronisation des dépôts de paquets... \c"
