@@ -1,4 +1,5 @@
 # Système
+antiword
 gvfs-afc
 gvfs-afp
 gvfs-archive
@@ -9,6 +10,10 @@ gvfs-mtp
 gvfs-smb
 ntfs-3g
 ntfsprogs
+p7zip
+poppler-utils
+python-mutagen
+python-rarfile
 unrar
 
 # Xfce
@@ -101,13 +106,13 @@ vlc
 winff
 
 # Accessoires
+brasero
 cherrytree
 conky
 engrampa
 gedit
 gedit-plugins
-p7zip
-brasero
+recoll
 
 # Jeux
 aisleriot
