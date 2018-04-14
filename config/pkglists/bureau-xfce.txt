@@ -40,12 +40,13 @@ urw-fonts
 webcore-fonts
 webcore-fonts-vista
 
-# Internet
+# Internet & Réseau
 filezilla
 firefox
 mozilla-adblockplus
 pidgin
 pidgin-otr
+remmina
 thunderbird
 thunderbird-enigmail
 transmission
