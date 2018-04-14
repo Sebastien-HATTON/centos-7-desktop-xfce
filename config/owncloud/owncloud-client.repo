@@ -1,0 +1,8 @@
+[owncloud-client]
+name=OwnCloud Desktop Client (RHEL 7)
+type=rpm-md
+baseurl=http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/CentOS_7/
+gpgcheck=1
+gpgkey=http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/CentOS_7/repodata/repomd.xml.key
+enabled=1
+priority=10
