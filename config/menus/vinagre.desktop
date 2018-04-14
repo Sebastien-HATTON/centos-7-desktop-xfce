@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Remote Desktop
+Name[de]=Entfernter Rechner
+Name[fr]=Bureau distant
+Comment=Vinagre
+Exec=vinagre %U
+Icon=preferences-desktop-remote-desktop
+Terminal=false
+MimeType=application/x-remote-connection;x-scheme-handler/vnc;
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Network;RemoteAccess;

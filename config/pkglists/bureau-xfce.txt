@@ -46,10 +46,10 @@ firefox
 mozilla-adblockplus
 pidgin
 pidgin-otr
-remmina
 thunderbird
 thunderbird-enigmail
 transmission
+vinagre
 
 # Bureautique
 evince
