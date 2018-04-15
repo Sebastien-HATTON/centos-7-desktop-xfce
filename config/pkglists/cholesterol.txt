@@ -1,6 +1,7 @@
 # Paquets inutiles
 
 # Système
+chrony
 firewall-config
 firewalld
 postfix
