@@ -43,7 +43,7 @@ webcore-fonts-vista
 # Internet & Réseau
 filezilla
 firefox
-mozilla-adblockplus
+#mozilla-adblockplus
 pidgin
 pidgin-otr
 thunderbird
