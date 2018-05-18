@@ -48,25 +48,7 @@ echo "       # tail -f /tmp/postinstall.log"
 echo
 sleep $DELAY
 
-# Activer la gestion des Delta RPM
-if ! rpm -q deltarpm 2>&1 > /dev/null ; then
-  echo -e ":: Activer la gestion des Delta RPM... \c"
-  yum -y install deltarpm >> $LOG 2>&1
-  echo -e "[${VERT}OK${GRIS}] \c"
-  sleep $DELAY
-  echo
-  echo "::"
-fi
-
-# Mise à jour initiale
-echo -e ":: Mise à jour initiale du système... \c"
-yum -y update >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
 # Basculer SELinux en mode permissif
-echo "::"
 echo -e ":: Basculer SELinux en mode permissif... \c"
 sleep $DELAY
 sed -i -e 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
@@ -121,6 +103,26 @@ echo -e ":: Configuration des dépôts de paquets officiels... \c"
 sleep $DELAY
 cat $CWD/config/yum/CentOS-Base.repo > /etc/yum.repos.d/CentOS-Base.repo
 sed -i -e 's/installonly_limit=5/installonly_limit=2/g' /etc/yum.conf
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
+exit 0
+
+# Activer la gestion des Delta RPM
+if ! rpm -q deltarpm 2>&1 > /dev/null ; then
+  echo "::"
+  echo -e ":: Activer la gestion des Delta RPM... \c"
+  yum -y install deltarpm >> $LOG 2>&1
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+  echo "::"
+fi
+
+# Mise à jour initiale
+echo -e ":: Mise à jour initiale du système... \c"
+yum -y update >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
