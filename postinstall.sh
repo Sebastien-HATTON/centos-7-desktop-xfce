@@ -157,8 +157,6 @@ if ! rpm -q epel-release 2>&1 > /dev/null ; then
   echo
 fi
 
-exit 0
-
 # Activer le dépôt [nux-dextop] avec une priorité de 10
 if ! rpm -q nux-dextop-release 2>&1 > /dev/null ; then
   echo "::"
@@ -207,14 +205,6 @@ if [ ! -f /etc/yum.repos.d/microlinux.repo ]; then
   echo
 fi
 
-# Synchroniser les dépôts de paquets
-echo "::"
-echo -e ":: Synchronisation des dépôts de paquets... \c"
-yum check-update >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
 # Installer les outils Linux listés dans config/pkglists/outils-linux.txt
 echo "::"
 echo -e ":: Installation des outils système Linux... \c"
@@ -223,6 +213,8 @@ yum -y install $PAQUETS >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
+
+exit 0
 
 # Installer le groupe de paquets X Window System
 echo "::"
