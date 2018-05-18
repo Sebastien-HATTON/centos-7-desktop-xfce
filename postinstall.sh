@@ -107,7 +107,14 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
-exit 0
+# Configurer le dépôt CR sans l'activer
+echo "::"
+echo -e ":: Configuration du dépôt de paquets CR... \c"
+sleep $DELAY
+cat $CWD/config/yum/CentOS-CR.repo > /etc/yum.repos.d/CentOS-CR.repo
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
 
 # Activer la gestion des Delta RPM
 if ! rpm -q deltarpm 2>&1 > /dev/null ; then
@@ -117,21 +124,12 @@ if ! rpm -q deltarpm 2>&1 > /dev/null ; then
   echo -e "[${VERT}OK${GRIS}] \c"
   sleep $DELAY
   echo
-  echo "::"
 fi
 
 # Mise à jour initiale
+echo "::"
 echo -e ":: Mise à jour initiale du système... \c"
 yum -y update >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
-# Activer le dépôt [cr] avec une priorité de 1
-echo "::"
-echo -e ":: Configuration du dépôt de paquets CR... \c"
-sleep $DELAY
-cat $CWD/config/yum/CentOS-CR.repo > /etc/yum.repos.d/CentOS-CR.repo
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
@@ -158,6 +156,8 @@ if ! rpm -q epel-release 2>&1 > /dev/null ; then
   sleep $DELAY
   echo
 fi
+
+exit 0
 
 # Activer le dépôt [nux-dextop] avec une priorité de 10
 if ! rpm -q nux-dextop-release 2>&1 > /dev/null ; then
