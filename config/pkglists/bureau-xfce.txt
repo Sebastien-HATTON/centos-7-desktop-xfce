@@ -17,6 +17,11 @@ python-rarfile
 unrar
 untex
 
+# Compatiblité 32-bits 
+glibc.i686
+libstdc++.i686
+zlib.i686
+
 # Xfce
 bluecurve-cursor-theme
 caja
@@ -56,6 +61,7 @@ evince
 libreoffice
 libreoffice-langpack-de
 libreoffice-langpack-fr
+pdfchain
 
 # Graphisme
 cdlabelgen

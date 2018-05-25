@@ -214,8 +214,6 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
-exit 0
-
 # Installer le groupe de paquets X Window System
 echo "::"
 echo -e ":: Installation du serveur graphique X Window... \c"
