@@ -49,6 +49,7 @@ webcore-fonts-vista
 filezilla
 firefox
 #mozilla-adblockplus
+owncloud-client
 pidgin
 pidgin-otr
 thunderbird
