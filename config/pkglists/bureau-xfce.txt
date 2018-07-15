@@ -1,128 +1,47 @@
-# Système
-antiword
-gvfs-afc
-gvfs-afp
-gvfs-archive
-gvfs-fuse
-gvfs-goa
-gvfs-gphoto2
-gvfs-mtp
-gvfs-smb
-ntfs-3g
-ntfsprogs
-p7zip
-poppler-utils
-python-mutagen
-python-rarfile
-unrar
-untex
-
-# Compatiblité 32-bits 
-glibc.i686
-libstdc++.i686
-zlib.i686
-
 # Xfce
+Thunar
+ffmpegthumbnailer
+openssh-askpass
+orage
+plank
+polkit-gnome
+thunar-archive-plugin
+thunar-volman
+tumbler
+xdg-user-dirs
+xdg-utils
+xfce4-appfinder
+xfce4-panel
+xfce4-power-manager
+xfce4-pulseaudio-plugin
+xfce4-screenshooter
+xfce4-session
+xfce4-session-engines
+xfce4-settings
+xfce4-terminal
+xfce4-whiskermenu-plugin
+xfce4-xkb-plugin
+xfdesktop
+xscreensaver
+
+# LightDM
+lightdm
+slick-greeter
+
+# Apparence
 bluecurve-cursor-theme
-caja
 clearlooks-phenix-gtk2-theme
 clearlooks-phenix-gtk3-theme
 clearlooks-phenix-xfwm4-theme
 desktop-backgrounds-basic
 elementary-xfce-icon-theme
-ffmpegthumbnailer
-plank
-xdg-user-dirs
-xfce4-screenshooter
-xfce4-whiskermenu-plugin
-xfce4-xkb-plugin
-xscreensaver
 
 # Polices TrueType
+abattis-cantarell-fonts
 freetype-infinality
 google-droid-sans-fonts
 urw-fonts
 webcore-fonts
 webcore-fonts-vista
 
-# Internet & Réseau
-filezilla
-firefox
-#mozilla-adblockplus
-owncloud-client
-pidgin
-pidgin-otr
-thunderbird
-thunderbird-enigmail
-transmission
-vinagre
-
-# Bureautique
-evince
-libreoffice
-libreoffice-langpack-de
-libreoffice-langpack-fr
-pdfchain
-
-# Graphisme
-cdlabelgen
-gimp
-gimp-data-extras
-gimp-help-de
-gimp-help-fr
-gimp-layer-via-copy-cut
-gimp-save-for-web
-gthumb
-inkscape
-inkscape-docs
-inkscape-view
-librecad
-scribus
-simple-scan
-
-# Multimédia
-asunder
-audacious 
-audacious-plugins
-audacious-plugins-freeworld
-audacity-freeworld
-gstreamer
-gstreamer-ffmpeg
-gstreamer-plugins-base
-gstreamer-plugins-bad
-gstreamer-plugins-bad-free
-gstreamer-plugins-bad-nonfree
-gstreamer-plugins-good
-gstreamer-plugins-ugly
-gstreamer-tools
-gstreamer1
-gstreamer1-libav
-gstreamer1-plugins-bad-free
-gstreamer1-plugins-bad-freeworld
-gstreamer1-plugins-base
-gstreamer1-plugins-base-tools
-gstreamer1-plugins-good
-gstreamer1-plugins-ugly
-#HandBrake-gui
-ladspa
-lame
-libdvdcss
-mlt-ffmpeg
-mplayer
-openshot
-python-CDDB
-vlc
-winff
-
-# Accessoires
-brasero
-cherrytree
-conky
-engrampa
-gedit
-gedit-plugins
-recoll
-
-# Jeux
-aisleriot
 

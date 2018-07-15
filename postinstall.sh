@@ -225,10 +225,13 @@ echo
 # Installer l'environnement de bureau Xfce
 echo "::"
 echo -e ":: Installation de l'environnement de bureau Xfce... \c"
-yum -y groupinstall "Xfce" >> $LOG 2>&1
+XFCE=$(egrep -v '(^\#)|(^\s+$)' $CWD/config/pkglists/bureau-xfce.txt)
+yum -y install $XFCE >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
+
+exit 0
 
 # Supprimer les paquets inutiles listés dans config/pkglists/cholesterol.txt
 echo "::"
