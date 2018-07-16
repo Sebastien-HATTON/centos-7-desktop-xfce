@@ -21,45 +21,19 @@ libstdc++.i686
 zlib.i686
 
 # Xfce
-Thunar
-ffmpegthumbnailer
-openssh-askpass
-orage
-plank
-polkit-gnome
-thunar-archive-plugin
-thunar-volman
-tumbler
-xdg-user-dirs
-xdg-utils
-xfce4-appfinder
-xfce4-panel
-xfce4-power-manager
-xfce4-pulseaudio-plugin
-xfce4-screenshooter
-xfce4-session
-xfce4-session-engines
-xfce4-settings
-xfce4-terminal
-xfce4-whiskermenu-plugin
-xfce4-xkb-plugin
-xfdesktop
-xscreensaver
-
-# LightDM
-lightdm
-slick-greeter
-
-# Apparence
 bluecurve-cursor-theme
-clearlooks-phenix-gtk2-theme
-clearlooks-phenix-gtk3-theme
-clearlooks-phenix-xfwm4-theme
 desktop-backgrounds-basic
 elementary-xfce-icon-theme
+ffmpegthumbnailer
+gtk2-engines
+plank
+xdg-user-dirs
+xfce4-screenshooter
+xfce4-whiskermenu-plugin
+xfce4-xkb-plugin
+xscreensaver
 
 # Polices TrueType
-abattis-cantarell-fonts
 freetype-infinality
 google-droid-sans-fonts
 urw-fonts
@@ -124,7 +98,7 @@ gstreamer1-plugins-base
 gstreamer1-plugins-base-tools
 gstreamer1-plugins-good
 gstreamer1-plugins-ugly
-HandBrake-gui
+#HandBrake-gui
 ladspa
 lame
 libdvdcss
@@ -139,7 +113,7 @@ winff
 brasero
 cherrytree
 conky
-engrampa
+#engrampa
 gedit
 gedit-plugins
 recoll

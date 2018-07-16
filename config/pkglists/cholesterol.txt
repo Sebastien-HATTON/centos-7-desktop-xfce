@@ -8,3 +8,9 @@ postfix
 setroubleshoot
 system-config-date
 system-config-printer
+
+# Xfce
+caja
+clearlooks-phenix-gtk2-theme
+clearlooks-phenix-gtk3-theme
+clearlooks-phenix-xfwm4-theme

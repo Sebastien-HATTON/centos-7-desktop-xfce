@@ -222,9 +222,17 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
-# Installer l'environnement de bureau Xfce et les applications
+# Installer l'environnement de bureau Xfce
 echo "::"
-echo -e ":: Installation du bureau Xfce et des applications... \c"
+echo -e ":: Installation du bureau Xfce... \c"
+yum -y group install Xfce >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
+# Installer les ajouts et les applications
+echo "::"
+echo -e ":: Installation des ajouts et des applications... \c"
 BUREAU=$(egrep -v '(^\#)|(^\s+$)' $CWD/config/pkglists/bureau-xfce.txt)
 yum -y install $BUREAU >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
@@ -240,54 +248,14 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
-# Autoriser les polices Type-1 pour Ghostscript
-echo "::"
-echo -e ":: Autoriser les polices Type-1 pour Ghostscript... \c"
-sleep $DELAY
-cat $CWD/config/infinality/infinality.conf > /etc/fonts/infinality/infinality.conf
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
-# Installer Gtkcdlabel
-if [ ! -f /usr/bin/gtkcdlabel.py ]; then
-  echo "::"
-  echo -e ":: Installation de l'application Gtkcdlabel... \c"
-  cd /tmp
-  wget -c --no-check-certificate https://www.microlinux.fr/download/gtkcdlabel-1.15.tar.bz2 >> $LOG 2>&1
-  tar xvjf gtkcdlabel-1.15.tar.bz2 -C / >> $LOG 2>&1
-  rm -f gtkcdlabel-1.15.tar.bz2
-  cd - >> $LOG 2>&1
-  echo -e "[${VERT}OK${GRIS}] \c"
-  sleep $DELAY
-  echo
-fi
-
-# Personnaliser les entrées du menu Xfce
-echo "::"
-echo -e ":: Personnalisation des entrées de menu Xfce... \c"
-sleep $DELAY
-$CWD/menus.sh >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
-# Installer le profil par défaut des utilisateurs
-echo "::"
-echo -e ":: Installation du profil par défaut des utilisateurs... \c"
-sleep $DELAY
-$CWD/profil.sh >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
 # Installer les polices Apple
 if [ ! -d /usr/share/fonts/apple-fonts ]; then
   cd /tmp
   rm -rf /usr/share/fonts/apple-fonts
   echo "::"
   echo -e ":: Installation des polices TrueType Apple... \c"
-  wget -c --no-check-certificate https://www.microlinux.fr/download/FontApple.tar.xz >> $LOG 2>&1
+  wget -c --no-check-certificate \
+    https://www.microlinux.fr/download/FontApple.tar.xz >> $LOG 2>&1
   mkdir /usr/share/fonts/apple-fonts
   tar xvf FontApple.tar.xz >> $LOG 2>&1
   mv Lucida*.ttf Monaco.ttf /usr/share/fonts/apple-fonts/
@@ -305,7 +273,8 @@ if [ ! -d /usr/share/fonts/eurostile ]; then
   rm -rf /usr/share/fonts/eurostile
   echo "::"
   echo -e ":: Installation de la police TrueType Eurostile... \c"
-  wget -c --no-check-certificate https://www.microlinux.fr/download/Eurostile.zip >> $LOG 2>&1
+  wget -c --no-check-certificate \
+    https://www.microlinux.fr/download/Eurostile.zip >> $LOG 2>&1
   unzip Eurostile.zip -d /usr/share/fonts/ >> $LOG 2>&1
   mv /usr/share/fonts/Eurostile /usr/share/fonts/eurostile
   fc-cache -f -v >> $LOG 2>&1
@@ -316,12 +285,22 @@ if [ ! -d /usr/share/fonts/eurostile ]; then
   echo
 fi
 
+# Autoriser les polices Type-1 pour Ghostscript
+echo "::"
+echo -e ":: Autoriser les polices Type-1 pour Ghostscript... \c"
+sleep $DELAY
+cat $CWD/config/infinality/infinality.conf > /etc/fonts/infinality/infinality.conf
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 # Installer les fonds d'écran Microlinux
 if [ ! -f /usr/share/backgrounds/.microlinux ]; then
   cd /tmp
   echo "::"
   echo -e ":: Installation des fonds d'écran Microlinux... \c"
-  wget -c --no-check-certificate https://www.microlinux.fr/download/microlinux-wallpapers.tar.gz >> $LOG 2>&1
+  wget -c --no-check-certificate \
+    https://www.microlinux.fr/download/microlinux-wallpapers.tar.gz >> $LOG 2>&1
   tar xvzf microlinux-wallpapers.tar.gz >> $LOG 2>&1 
   cp -f microlinux-wallpapers/* /usr/share/backgrounds/ >> $LOG 2>&1
   touch /usr/share/backgrounds/.microlinux >> $LOG 2>&1
@@ -332,7 +311,29 @@ if [ ! -f /usr/share/backgrounds/.microlinux ]; then
   echo
 fi
 
-exit 0
+# Installer Gtkcdlabel
+if [ ! -f /usr/bin/gtkcdlabel.py ]; then
+  echo "::"
+  echo -e ":: Installation de l'application Gtkcdlabel... \c"
+  cd /tmp
+  wget -c --no-check-certificate \
+    https://www.microlinux.fr/download/gtkcdlabel-1.15.tar.bz2 >> $LOG 2>&1
+  tar xvjf gtkcdlabel-1.15.tar.bz2 -C / >> $LOG 2>&1
+  rm -f gtkcdlabel-1.15.tar.bz2
+  cd - >> $LOG 2>&1
+  echo -e "[${VERT}OK${GRIS}] \c"
+  sleep $DELAY
+  echo
+fi
+
+# Personnaliser les entrées du menu Xfce
+echo "::"
+echo -e ":: Personnalisation des entrées de menu Xfce... \c"
+sleep $DELAY
+$CWD/menus.sh >> $LOG 2>&1
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
 
 # Personnaliser GDM
 if [ ! -f /etc/dconf/profile/gdm ]; then
@@ -347,6 +348,17 @@ if [ ! -f /etc/dconf/profile/gdm ]; then
   sleep $DELAY
   echo
 fi
+
+exit 0
+
+# Installer le profil par défaut des utilisateurs
+#echo "::"
+#echo -e ":: Installation du profil par défaut des utilisateurs... \c"
+#sleep $DELAY
+#$CWD/profil.sh >> $LOG 2>&1
+#echo -e "[${VERT}OK${GRIS}] \c"
+#sleep $DELAY
+#echo
 
 # Basculer en mode graphique par défaut
 echo "::"
