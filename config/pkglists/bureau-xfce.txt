@@ -1,3 +1,25 @@
+# Système
+antiword
+gvfs-afc
+gvfs-afp
+gvfs-archive
+gvfs-fuse
+gvfs-goa
+gvfs-gphoto2
+gvfs-mtp
+gvfs-smb
+p7zip
+poppler-utils
+python-mutagen
+python-rarfile
+unrar
+untex
+
+# Compatiblité 32-bits 
+glibc.i686
+libstdc++.i686
+zlib.i686
+
 # Xfce
 Thunar
 ffmpegthumbnailer
@@ -44,4 +66,84 @@ urw-fonts
 webcore-fonts
 webcore-fonts-vista
 
+# Internet & Réseau
+chromium
+chromium-pepper-flash
+filezilla
+owncloud-client
+pidgin
+pidgin-otr
+thunderbird
+thunderbird-enigmail
+transmission
+vinagre
+
+# Bureautique
+evince
+libreoffice
+libreoffice-langpack-de
+libreoffice-langpack-fr
+pdfchain
+
+# Graphisme
+cdlabelgen
+gimp
+gimp-data-extras
+gimp-help-de
+gimp-help-fr
+gimp-layer-via-copy-cut
+gimp-save-for-web
+gthumb
+inkscape
+inkscape-docs
+inkscape-view
+librecad
+scribus
+simple-scan
+
+# Multimédia
+asunder
+audacious 
+audacious-plugins
+audacious-plugins-freeworld
+audacity-freeworld
+gstreamer
+gstreamer-ffmpeg
+gstreamer-plugins-base
+gstreamer-plugins-bad
+gstreamer-plugins-bad-free
+gstreamer-plugins-bad-nonfree
+gstreamer-plugins-good
+gstreamer-plugins-ugly
+gstreamer-tools
+gstreamer1
+gstreamer1-libav
+gstreamer1-plugins-bad-free
+gstreamer1-plugins-bad-freeworld
+gstreamer1-plugins-base
+gstreamer1-plugins-base-tools
+gstreamer1-plugins-good
+gstreamer1-plugins-ugly
+HandBrake-gui
+ladspa
+lame
+libdvdcss
+mlt-ffmpeg
+mplayer
+openshot
+python-CDDB
+vlc
+winff
+
+# Accessoires
+brasero
+cherrytree
+conky
+engrampa
+gedit
+gedit-plugins
+recoll
+
+# Jeux
+aisleriot
 

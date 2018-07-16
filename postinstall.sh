@@ -222,31 +222,20 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
-# Installer l'environnement de bureau Xfce
+# Installer l'environnement de bureau Xfce et les applications
 echo "::"
-echo -e ":: Installation de l'environnement de bureau Xfce... \c"
-XFCE=$(egrep -v '(^\#)|(^\s+$)' $CWD/config/pkglists/bureau-xfce.txt)
-yum -y install $XFCE >> $LOG 2>&1
+echo -e ":: Installation du bureau Xfce et des applications... \c"
+BUREAU=$(egrep -v '(^\#)|(^\s+$)' $CWD/config/pkglists/bureau-xfce.txt)
+yum -y install $BUREAU >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
-
-exit 0
 
 # Supprimer les paquets inutiles listés dans config/pkglists/cholesterol.txt
 echo "::"
 echo -e ":: Suppression des paquets inutiles... \c"
 CHOLESTEROL=$(egrep -v '(^\#)|(^\s+$)' $CWD/config/pkglists/cholesterol.txt)
 yum -y remove $CHOLESTEROL >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
-
-# Installer les paquets listés dans config/pkglists/bureau-xfce.txt
-echo "::"
-echo -e ":: Installation des applications supplémentaires... \c"
-PAQUETS=$(egrep -v '(^\#)|(^\s+$)' $CWD/config/pkglists/bureau-xfce.txt)
-yum -y install $PAQUETS >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
@@ -342,6 +331,8 @@ if [ ! -f /usr/share/backgrounds/.microlinux ]; then
   sleep $DELAY
   echo
 fi
+
+exit 0
 
 # Personnaliser GDM
 if [ ! -f /etc/dconf/profile/gdm ]; then
