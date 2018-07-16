@@ -4,9 +4,10 @@ Name[de]=Stapelverarbeitung
 Name[fr]=Traitement par lots
 Comment=Thunar Bulk Rename
 Exec=/usr/lib64/Thunar/ThunarBulkRename %F
-Icon=Thunar
+#Icon=Thunar
+Icon=applications-versioncontrol
 Terminal=false
 StartupNotify=true
 Type=Application
-Categories=System;Utility;Core;GTK;Filesystem;
+Categories=Utility;
 

@@ -8,5 +8,5 @@ Icon=Thunar
 Terminal=false
 StartupNotify=true
 Type=Application
-Categories=System;Utility;Core;GTK;FileTools;FileManager;
+Categories=Utility;
 

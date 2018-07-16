@@ -9,6 +9,6 @@ Exec=xfce4-screenshooter
 Type=Application
 StartupNotify=true
 Terminal=false
-Categories=GTK;Utility;Graphics;
+Categories=Graphics;
 NotShowIn=KDE;GNOME;
 X-Desktop-File-Install-Version=0.22
