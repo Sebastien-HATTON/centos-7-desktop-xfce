@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Name=Web Browser
+Name[de]=Webbrowser
+Name[fr]=Navigateur Web
+Comment=Chromium
+Exec=/usr/bin/chromium-browser %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=chromium-browser
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+StartupWMClass=Chromium-browser
+Keywords=web;browser;internet;
+StartupNotify=true
+
