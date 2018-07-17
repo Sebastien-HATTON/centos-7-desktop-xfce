@@ -44,6 +44,8 @@ webcore-fonts-vista
 chromium
 chromium-pepper-flash
 filezilla
+firefox
+flash-plugin
 owncloud-client
 pidgin
 pidgin-otr
