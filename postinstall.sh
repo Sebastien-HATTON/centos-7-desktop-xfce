@@ -349,21 +349,11 @@ if [ ! -f /etc/dconf/profile/gdm ]; then
   echo
 fi
 
-exit 0
-
 # Installer le profil par défaut des utilisateurs
-#echo "::"
-#echo -e ":: Installation du profil par défaut des utilisateurs... \c"
-#sleep $DELAY
-#$CWD/profil.sh >> $LOG 2>&1
-#echo -e "[${VERT}OK${GRIS}] \c"
-#sleep $DELAY
-#echo
-
-# Basculer en mode graphique par défaut
 echo "::"
-echo -e ":: Basculer en mode graphique par défaut... \c"
-systemctl set-default graphical.target >> $LOG 2>&1
+echo -e ":: Installation du profil par défaut des utilisateurs... \c"
+sleep $DELAY
+$CWD/profil.sh >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
