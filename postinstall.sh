@@ -222,12 +222,10 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
-exit 0
-
-# Installer l'environnement de bureau Xfce
+# Installer le groupe de paquets Xfce
 echo "::"
 echo -e ":: Installation du bureau Xfce... \c"
-yum -y group install Xfce >> $LOG 2>&1
+yum -y groupinstall "Xfce" >> $LOG 2>&1
 echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
@@ -338,18 +336,18 @@ sleep $DELAY
 echo
 
 # Personnaliser GDM
-if [ ! -f /etc/dconf/profile/gdm ]; then
-  echo "::"
-  echo -e ":: Personnalisation de GDM... \c"
-  cat $CWD/config/gdm/gdm > /etc/dconf/profile/gdm
-  cat $CWD/config/gdm/00-login-screen > /etc/dconf/db/gdm.d/00-login-screen
-  cat $CWD/config/gdm/01-logo > /etc/dconf/db/gdm.d/01-logo
-  cp $CWD/config/gdm/microlinux-logo.png /usr/share/pixmaps/ >> $LOG 2>&1
-  dconf update
-  echo -e "[${VERT}OK${GRIS}] \c"
-  sleep $DELAY
-  echo
-fi
+#if [ ! -f /etc/dconf/profile/gdm ]; then
+#  echo "::"
+#  echo -e ":: Personnalisation de GDM... \c"
+#  cat $CWD/config/gdm/gdm > /etc/dconf/profile/gdm
+#  cat $CWD/config/gdm/00-login-screen > /etc/dconf/db/gdm.d/00-login-screen
+#  cat $CWD/config/gdm/01-logo > /etc/dconf/db/gdm.d/01-logo
+#  cp $CWD/config/gdm/microlinux-logo.png /usr/share/pixmaps/ >> $LOG 2>&1
+#  dconf update
+#  echo -e "[${VERT}OK${GRIS}] \c"
+#  sleep $DELAY
+#  echo
+#fi
 
 # Installer le profil par défaut des utilisateurs
 echo "::"

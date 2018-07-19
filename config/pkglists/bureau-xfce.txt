@@ -116,8 +116,8 @@ brasero
 cherrytree
 conky
 #engrampa
-gedit
-gedit-plugins
+#gedit
+#gedit-plugins
 recoll
 
 # Jeux
