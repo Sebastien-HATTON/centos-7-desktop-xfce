@@ -222,6 +222,8 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+exit 0
+
 # Installer l'environnement de bureau Xfce
 echo "::"
 echo -e ":: Installation du bureau Xfce... \c"
