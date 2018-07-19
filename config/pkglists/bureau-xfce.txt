@@ -115,10 +115,11 @@ winff
 brasero
 cherrytree
 conky
-#engrampa
-#gedit
-#gedit-plugins
+engrampa
+gedit
+gedit-plugins
 recoll
+xarchiver
 
 # Jeux
 aisleriot
