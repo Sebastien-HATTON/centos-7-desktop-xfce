@@ -70,6 +70,15 @@ echo -e "[${VERT}OK${GRIS}] \c"
 sleep $DELAY
 echo
 
+# Configurer l'affichage en temps réel
+echo "::"
+echo -e ":: Configuration de l'affichage en temps réel... \c"
+sleep $DELAY
+cat $CWD/config/sysctl.d/inotify.conf > /etc/sysctl.d/inotify.conf
+echo -e "[${VERT}OK${GRIS}] \c"
+sleep $DELAY
+echo
+
 # Personnalisation du shell Bash pour root
 echo "::"
 echo -e ":: Configuration du shell Bash pour l'administrateur... \c"
